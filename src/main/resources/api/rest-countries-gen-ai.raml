@@ -1,9 +1,23 @@
 #%RAML 1.0
 title: rest-countries-gen-ai
 
+traits:
+  client-id-required:
+    headers:
+      client_id:
+        type: string
+      client_secret:
+        type: string
+    responses:
+      401:
+        description: Unauthorized or invalid client application credentials
+      500:
+        description: Bad response from authorization server, or WSDL SOAP Fault error
+
 
 /countries:
   get:
+    is: [client-id-required]
     displayName: restcountries
     description: Retrieve countries based on specified filters.
     queryParameters:
@@ -17,7 +31,7 @@ title: rest-countries-gen-ai
         type: number
         example: 10
         required: false
-      sort:
+      sort-by-country:
         description: sort data by name/common
         type: string
         enum: [ascend, descend]
