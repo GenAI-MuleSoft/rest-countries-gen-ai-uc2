@@ -41,4 +41,8 @@ Given the `/countries` endpoint, here are some example usages:
 
 ---
 
-I hope this serves as a useful guide to the application and its endpoint! 📘
+In the Anypoint Exchange you can find more details about API: how to call, request and response examples. 
+Also you can try API to call mock service. 
+
+Link: https://anypoint.mulesoft.com/exchange/portals/softserve-inc-62/4af9c84b-ab45-49f9-9cc2-9764f985bec1/rest-countries-gen-ai-ovdov/
+
